@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="BA-Logo.png" alt="Logo"></a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <div class="nav-center">
+                    <li class="dropdown">
+                        <button class="dropbtn">Projects</button>
+                        <div class="dropdown-content">
+                            <a href="projects.html">Projects</a>
+                        </div>
+                    </li>
+                    <li><a href="profile.html">Profile</a></li>
+                </div>
+                <li class="contact"><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Fill out the form below to get in touch with us.</p>
+            
+            <form action="submit_form.php" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+    
+                <button type="submit">Send</button>
+            </form>
+    
+            <!-- Contact Info with Hyperlink -->
+            <p class="contact-info">Or you can reach us at 
+                <a href="cs.beyondambitious.com">cs.beyondambitious.com</a>
+            </p>
+    
+            <!-- Social Media Links -->
+            <div class="social-links">
+                <a href="https://www.instagram.com/beyond.mbitious" target="_blank">
+                <img src="Instagram_icon.png.webp" alt="Instagram">
+                <span>Instagram</span>
+           </a>
+          <div class="disabled-link">
+              <img src="174857.png" alt="LinkedIn">
+               <span>Coming Soon</span>
+            </div>
+</div>
+
+        </section>
+    </main>
+    
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 BeyondAmbitious. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

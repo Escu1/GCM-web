@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="BA-Logo.png" alt="Logo"></a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <div class="nav-center">
+                    <li class="dropdown">
+                        <button class="dropbtn">Projects</button>
+                        <div class="dropdown-content">
+                            <a href="projects.html">Projects</a>
+                           <!-- <a href="projects2.html">Projects 2</a> -->
+                        </div>
+                    </li>
+                    <li><a href="profile.html">Profile</a></li>
+                </div>
+                <li class="contact"><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Carousel Container -->
+    <section class="carousel-container">
+        <div class="carousel">
+            <img src="project1.jpg" class="carousel-image" alt="Project 1">
+            <img src="2 albums_page-0001.jpg" class="carousel-image" alt="Project 2">
+            <img src="POST1-2.jpg" class="carousel-image" alt="Project 3">
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </section>
+    
+    
+    <!-- Footer
+    <div id="footer"></div>
+    <script>
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+     -->
+    <script src="carosel.js"></script>
+</body>
+</html>
