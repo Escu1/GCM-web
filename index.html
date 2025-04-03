@@ -9,9 +9,9 @@
 <body>
 
     <section id="section1" class="bg-section image-bg" style="background-image: url('2.png');">
-        <a href="https://www.instagram.com/beyond.mbitious/" class="squircle" style="top: 3%; left: 2%;">Instagram</a>
+        <a href="https://www.instagram.com/beyond.mbitious/" class="squircle" style="top: 3%; left: 18%;">Instagram</a>
         <a href="shop.html" class="squircle" style="top: 3%; left: 75%;">Shop</a>
-        <a href="https://example.com" class="squircle" style="top: 3%; left: 88%;">About</a>
+        <a href="profile.html" class="squircle" style="top: 3%; left: 88%;">About</a>
         <div class="text-overlay" style="top: 62.5%; left: 50%; text-align: center; font-size: 2em;">
             <h1>
             Transforming the album experience
@@ -80,4 +80,14 @@
 
 
 </body>
+<div id="footer"></div>
+
+<script>
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('footer').innerHTML = data);
+</script>
+
+
+
 </html>

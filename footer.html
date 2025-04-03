@@ -1,10 +1,81 @@
 <footer>
-    <div class="footer-container">
-        <div class="footer-links">
-            <a href="about.html">About Us</a>
-            <a href="terms.html">Terms of Service</a>
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="contact.html">Contact</a>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Fill out the form below to get in touch with us.</p>
+        
+        <form action="submit_form.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+
+        <!-- Contact Info with Hyperlink -->
+        <p class="contact-info">
+            Or you can reach us at 
+            <a href="mailto:cs@beyondambitious.com">cs@beyondambitious.com</a>
+        </p>
+
+        <!-- Social Media Links -->
+        <div class="social-links">
+            <a href="https://www.instagram.com/beyond.mbitious" target="_blank" class="social-link">
+                <img src="Instagram_icon.png.webp" alt="Instagram">
+                <span>Instagram</span>
+            </a>
+            <div class="social-link disabled-link">
+                <img src="174857.png" alt="LinkedIn">
+                <span>Coming Soon</span>
+            </div>
         </div>
-    </div>
+    </section>
 </footer>
+
+<!-- CSS for Styling -->
+<style>
+    footer {
+        background-color: #fee64d; /* Bright yellow background */
+        color: black; /* Black text */
+        padding: 20px;
+        text-align: center;
+    }
+
+    a {
+        color: blue; /* Make links blue */
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    a:hover {
+        text-decoration: underline; /* Underline links on hover */
+    }
+
+    .social-links {
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Center alignment */
+        gap: 20px; /* Space between icons */
+        margin-top: 15px;
+    }
+
+    .social-link {
+        display: flex;
+        align-items: center;
+        gap: 10px; /* Space between icon and text */
+    }
+
+    .social-link img {
+        width: 30px; /* Adjust icon size */
+        height: auto;
+    }
+
+    .disabled-link {
+        opacity: 0.5; /* Make "Coming Soon" less prominent */
+        pointer-events: none; /* Disable clicking */
+    }
+</style>
