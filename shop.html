@@ -8,39 +8,101 @@
 </head>
 <body>
 
-    <!-- Shop Page Content -->
-    <section id="section1" class="bg-section image-bg" style="background-image: url('shop-background.jpg');">
-        
-        <!-- Navigation Buttons -->
-        <a href="index.html" class="squircle" style="top: 3%; left: 2%;">Home</a>
-        <a href="https://www.instagram.com/beyond.mbitious/" class="squircle" style="top: 3%; left: 18%;">Instagram</a>
-        <a href="profile.html" class="squircle" style="top: 3%; left: 88%;">About</a>
-        
-        <div class="text-overlay" style="top: 50%; left: 50%; text-align: center; font-size: 2em;">
-            <h1>Welcome to the Shop</h1>
-            <p>Browse our exclusive album packaging designs.</p>
-        </div>
-    </section>
+    <div class="content-wrapper">
+        <!-- Shop Page Content -->
+        <section id="section1" class="bg-section image-bg" style="background-image: url('shop-background.jpg');">
+            
+            <!-- Navigation Buttons -->
+            <a href="index.html" class="squircle" style="top: 3%; left: 2%;">Home</a>
+            <a href="https://www.instagram.com/beyond.mbitious/" class="squircle" style="top: 3%; left: 18%;">Instagram</a>
+            <a href="profile.html" class="squircle" style="top: 3%; left: 88%;">About</a>
+            
+            <div class="text-overlay" style="top: 50%; left: 50%; text-align: center; font-size: 2em;">
+                <h1>Welcome to the Shop</h1>
+                <p>Browse our exclusive album packaging designs.</p>
+            </div>
+        </section>
 
-    <!-- Product Gallery Section -->
-    <section class="product-gallery">
-        <div class="product-item">
-            <img src="product1.jpg" alt="Product 1">
-            <p>Product 1</p>
-            <button class="buy-button">Buy Now</button>
+        <!-- Product Gallery Section -->
+        <section class="product-gallery">
+            <div class="product-item">
+                <img src="Berlioz Live Jazz Poster -02.jpg" alt="Product 1">
+                <p>Album</p>
+                <p class="product-price">$29.99</p>
+                <button class="buy-button">Buy Now</button>
+            </div>
+            
+            <div class="product-item">
+                <img src="61RQoFbY6KL._AC_UF894,1000_QL80_.jpg" alt="Product 2">
+                <p>Album + Painting</p>
+                <p class="product-price">$39.99</p>
+                <button class="buy-button">Buy Now</button>
+            </div>
+            
+            <div class="product-item">
+                <img src="Front Hoodie.jpg" alt="Product 3">
+                <p>Album + Painting + hoodie</p>
+                <p class="product-price">$59.99</p>
+                <button class="buy-button">Buy Now</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Purchase Popup -->
+    <div id="purchase-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h2>Complete Your Purchase</h2>
+            <form id="purchase-form">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="John Doe" required>
+
+                <label for="address">Shipping Address</label>
+                <input type="text" id="address" placeholder="123 Main St, City, Country" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="email@example.com" required>
+
+                <label for="payment">Payment Method</label>
+                <select id="payment" required>
+                    <option value="credit">Credit Card</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="crypto">Crypto</option>
+                </select>
+
+                <label for="card-number">Card Number</label>
+                <input type="text" id="card-number" placeholder="**** **** **** 1234" required>
+
+                <!-- Expiration Date and CVV -->
+                <label for="expiration-date">Expiration Date</label>
+                <input type="month" id="expiration-date" required>
+
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" placeholder="123" required>
+
+                <button type="submit" class="confirm-btn">Confirm Purchase</button>
+            </form>
         </div>
-        <div class="product-item">
-            <img src="product2.jpg" alt="Product 2">
-            <p>Product 2</p>
-            <button class="buy-button">Buy Now</button>
-        </div>
-        <div class="product-item">
-            <img src="product3.jpg" alt="Product 3">
-            <p>Product 3</p>
-            <button class="buy-button">Buy Now</button>
-        </div>
-        <!-- Add more products here if needed -->
-    </section>
+    </div>
+
+    <script>
+       // Open Popup
+    function openPopup() {
+        document.getElementById("purchase-popup").style.display = "block";
+        document.querySelector(".content-wrapper").classList.add("blur");
+    }
+
+    // Close Popup
+    function closePopup() {
+        document.getElementById("purchase-popup").style.display = "none";
+        document.querySelector(".content-wrapper").classList.remove("blur");
+    }
+
+    // Attach event listeners to all buy buttons
+    document.querySelectorAll(".buy-button").forEach(button => {
+        button.addEventListener("click", () => openPopup());
+    });
+    </script>
 
 </body>
 </html>
